@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@mipmap/fondo"
+    android:layout_height="match_parent"
+    tools:context=".view.Activity.ListadoNutricionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="4dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/action_bar_Nutricion"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/cuatro_bordes_redondos_izq"
+            android:elevation="30dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textcambio_eje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="Nutricion"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/Recicle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/action_bar_Nutricion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

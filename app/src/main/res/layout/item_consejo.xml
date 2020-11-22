@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2962FF"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="25dp"
+        android:elevation="25dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/NombreUsuario_consejo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:text="Nombre Apellido"
+                android:textColor="#2962FF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/contenido_consejo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/contenido_consejo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="lfjdnfdfojsdñkfjsdjfpsdflsdjfpsdjflsdjflkjsdfljsdlfkjsdlfjsdlfjsdlfjsdlkjflsdjflsdjflsdjflsdjfksdbkfbsdfkbsdkfbsdkfbsdjfbsdkfbksdfksdhfksdhfkdshfkjsdhkfhskfhskdgfksdgfkdgfkgsdkfgsdkgfksdgfksdgfksdgkfbsdkfghsdkfgsdoi"
+                android:textColor="#474646"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/fecha_publica"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/NombreUsuario_consejo" />
+
+            <TextView
+                android:id="@+id/fecha_publica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="08/11/2020 a las 8:00"
+                android:textColor="#474646"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contenido_consejo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

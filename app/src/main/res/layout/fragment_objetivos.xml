@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.ConsejosFragment"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp">
+
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/graficas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:padding="15dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <TextView
+
+                    android:id="@+id/textgrafica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estadisticas"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textmasgrafica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/mostrarmas"
+                    android:textColor="#2962FF"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <lecho.lib.hellocharts.view.LineChartView
+
+                    android:id="@+id/chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textgrafica" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:padding="15dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/graficas">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/ver_nutriciones"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/boton_degradado_azul"
+                    android:text="Miralos"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/parrafNutricion" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:src="@drawable/nutricion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/parrafNutricion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/mejores_resultado"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textNutricion" />
+
+                <TextView
+                    android:id="@+id/textNutricion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Salud y Nutricion"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

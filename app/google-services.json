@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "950463270149",
+    "firebase_url": "https://task-workout-5d00a.firebaseio.com",
+    "project_id": "task-workout-5d00a",
+    "storage_bucket": "task-workout-5d00a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950463270149:android:e356fa55413ea79e1e7b6c",
+        "android_client_info": {
+          "package_name": "com.juannarvaez.taskworkout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950463270149-e26ji3bb86s7jauafmut7te4v9uc87d4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqXy9rIfsRm5lLfoPQcW1puMuLQ7o6noQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950463270149-e26ji3bb86s7jauafmut7te4v9uc87d4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

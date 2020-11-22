@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Fragment.EjerciciosFragment"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+        android:id="@+id/contenedorcalentamiento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp"
+
+        app:layout_constraintBottom_toTopOf="@id/contenedorpecho"
+        app:layout_constraintEnd_toStartOf="@id/contenedorbrazo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_calentamineto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Calentamiento"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageCalent" />
+
+
+        <ImageButton
+            android:id="@+id/imageCalent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/calentamiento"
+            app:layout_constraintBottom_toTopOf="@id/tv_calentamineto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedorbrazo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/contenedorespalda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contenedorcalentamiento"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageBrazo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/brazo"
+            app:layout_constraintBottom_toTopOf="@id/tv_brazo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_brazo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Brazo"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageBrazo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="5dp"
+        android:id="@+id/contenedorpecho"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/contenedorpiernas"
+        app:layout_constraintEnd_toStartOf="@id/contenedorespalda"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contenedorcalentamiento">
+
+        <ImageButton
+            android:id="@+id/imagePecho"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:orientation="horizontal"
+
+            android:padding="5dp"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/pecho"
+            app:layout_constraintBottom_toTopOf="@id/tv_pecho"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pecho"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Pecho"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagePecho" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedorespalda"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="5dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/contenedornotequedes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contenedorpecho"
+        app:layout_constraintTop_toBottomOf="@id/contenedorbrazo">
+
+        <ImageButton
+            android:id="@+id/imageespalda"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/espalda"
+            app:layout_constraintBottom_toTopOf="@id/tv_espalda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_espalda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Espalda"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageespalda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedornotequedes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contenedorpiernas"
+        app:layout_constraintTop_toBottomOf="@id/contenedorespalda">
+
+        <ImageButton
+            android:id="@+id/imagenoquedes"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_te_quedes_quieto"
+            app:layout_constraintBottom_toTopOf="@id/tv_notequedesquieto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_notequedesquieto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="No te quedes quieto"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagenoquedes" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedorpiernas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="5dp"
+        android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/contenedornotequedes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contenedorpecho">
+
+        <ImageButton
+            android:id="@+id/imagepiernas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/pierna"
+            app:layout_constraintBottom_toTopOf="@id/tv_piernas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent " />
+
+        <TextView
+            android:id="@+id/tv_piernas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Piernas"
+            android:textAlignment="center"
+            android:textColor="#040404"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagepiernas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

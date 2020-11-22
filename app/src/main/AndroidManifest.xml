@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.juannarvaez.taskworkout">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.Activity.DetalleProtocoloActivity"></activity>
+        <activity android:name=".view.Activity.ListadoAgendaAdminActivity" />
+        <activity android:name=".view.Activity.ListadoProtocolosActivity" />
+        <activity android:name=".view.Activity.DetalleNutricionActivity" />
+        <activity android:name=".view.Activity.ListadoNutricionActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosNotequedesActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosPiernasActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosEspaldaActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosPechoActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosBrazoActivity" />
+        <activity android:name=".view.Activity.DetalleEjerciciosActivity" />
+        <activity android:name=".view.Activity.CargarEjerciciosCalentamientoActivity" />
+        <activity android:name=".view.Activity.PerfilActivity" />
+        <activity android:name=".view.Activity.AgendarCitaActivity" />
+        <activity android:name=".view.Activity.PublicacionActivity" />
+        <activity
+            android:name=".view.Activity.OlvideContrasena"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.Activity.InicioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.Activity.RegistroActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.Activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

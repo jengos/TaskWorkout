@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@mipmap/fondo"
+    tools:context=".view.Activity.PerfilActivity"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:id="@+id/linerpefil"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/cuatro_bordes_redondos_izq"
+        android:elevation="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="@string/perfil"
+                android:textColor="#304FFE"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linerpefil">
+
+        <ImageView
+            android:id="@+id/imagePerfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@id/altura_Perfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            app:srcCompat="@drawable/ic_profile_user" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/NombreUsuario_Perfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imagePerfil"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_nombre_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/genero_Perfil"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imagePerfil"
+            app:layout_constraintTop_toBottomOf="@id/NombreUsuario_Perfil">
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/lV_genero_perfil"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:theme="@style/CampoTextAzul" />
+            <EditText
+                android:id="@+id/et_genero_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:enabled="false"
+                android:ems="10"
+
+                android:hint="@string/genero"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telefo_Perfil"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imagePerfil"
+            app:layout_constraintTop_toBottomOf="@id/genero_Perfil">
+
+            <EditText
+                android:id="@+id/et_telefono_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+
+                android:hint="@string/Telefono"
+                android:inputType="number|phone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/altura_Perfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telefo_Perfil">
+
+            <EditText
+                android:id="@+id/et_altura_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_altura"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/Altura"
+                android:inputType="number|phone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/peso_Perfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/altura_Perfil"
+            app:layout_constraintTop_toBottomOf="@id/telefo_Perfil">
+
+            <EditText
+                android:id="@+id/et_peso_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_peso"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/peso"
+                android:inputType="number|phone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/imcActual_Perfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/altura_Perfil">
+
+            <EditText
+                android:id="@+id/et_imcActual_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:focusable="false"
+                                android:ems="10"
+                android:hint="@string/ImcActual"
+                android:inputType="number|phone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pesoIdeal_Perfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imcActual_Perfil"
+            app:layout_constraintTop_toBottomOf="@id/peso_Perfil">
+
+            <EditText
+                android:id="@+id/et_pesoideal_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/pesoIdeal"
+                android:inputType="number|phone"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/correo_Perfil"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imcActual_Perfil">
+
+            <EditText
+                android:id="@+id/et_corre_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:ems="10"
+
+                android:hint="@string/correo"
+                android:inputType="textWebEmailAddress"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cumple_Perfil"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/correo_Perfil">
+
+            <EditText
+                android:onClick="ingresarFechacumple"
+                android:id="@+id/et_cumple_Perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+
+                android:hint="@string/fechadeCumple"
+                android:inputType="date"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/textSideHint"
+                android:theme="@style/CampoTextAzul" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:onClick="EditarPerfil"
+            android:id="@+id/bto_editar_perfil"
+            android:background="@drawable/cuatro_bordes_redondos_con_borde_k"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="15dp"
+            android:text="Editar Perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

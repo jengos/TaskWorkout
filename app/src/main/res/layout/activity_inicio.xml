@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@mipmap/fondo"
+    tools:context=".view.Activity.InicioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <LinearLayout
+            android:elevation="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/cuatro_bordes_redondos_izq"
+            android:gravity="center_vertical|right"
+            >
+            <TextView
+                android:id="@+id/textcambio"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Consejos"
+                android:textSize="20dp"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/ViewPagerpaginas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabTextColor="@color/black"
+            android:id="@+id/tabControles"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/cuatro_bordes_redondos_der"
+
+            app:tabTextAppearance="@style/CustomTabText">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabConsejos"
+
+                android:icon="@drawable/ic_consejos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Consejos" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabAgenda"
+                android:icon="@drawable/ic_agenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Agenda" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabObtetivos"
+                android:icon="@drawable/ic_objectivos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Objetivos" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabEjercicios"
+                android:icon="@drawable/ic_barra_con_pesas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ejercicios" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabMasyPerfil"
+                android:icon="@drawable/ic_mas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mas" />
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

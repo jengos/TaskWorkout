@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Task Workout</string>
+    <string name="facebook_app_id">976607009517049</string>
+    <string name="fb_login_protocol_scheme">fb976607009517049</string>
+
+
+    <string name="Consejos">Consejos</string>
+    <string name="Agenda">Agenda</string>
+    <string name="Objetivos">Objetivos</string>
+    <string name="ejercicios">Ejercicios</string>
+    <string name="mas">Mas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tv_ajustes">Ajustes</string>
+    <string name="bto_editar_perfil">Editar Perfil</string>
+    <string name="cerrar_Sesion">Cerrar sesion</string>
+    <string name="mejores_resultado">
+        Ven y sigue nuestros consejos básico de salud y nustricion para obtener mejores resultado
+    </string>
+    <string name="mostrarmas"><b>Mostrar mas</b></string>
+    <string name="sesion_de_entrenamiento"><b>Sesion de Entrenamiento</b></string>
+    <string name="publicar_consejo"><b><i>Publicar Consejo</i></b></string>
+    <string name="compartir_consejo">Tienes algun Consejo que Compartir  ?</string>
+    <string name="perfil"><b>Perfil</b></string>
+    <string name="nombre"><b>Nombre</b></string>
+    <string name="correo"><b>Correo</b></string>
+    <string name="Telefono"><b>Telefono</b></string>
+    <string name="Altura"><b>Altura</b></string>
+    <string name="peso"><b>Peso</b></string>
+    <string name="genero"><b>Genero</b></string>
+    <string name="ImcActual"><b>Indice de Masa Corporal</b></string>
+    <string name="pesoIdeal"><b>Peso Ideal</b></string>
+    <string name="fechadeCumple"><b>Fecha de Cumpleaños</b></string>
+    <string name="agenda_fecha"><b>Fecha:</b></string>
+    <string name="agenda_hora"><b>Hora:</b></string>
+    <string name="infomacion_general">Informacion General</string>
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@mipmap/fondo"
+    tools:context=".view.Activity.DetalleNutricionActivity"
+    >
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+    android:id="@+id/action_bar_ejercicos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+
+
+    android:orientation="horizontal"
+    android:elevation="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/cuatro_bordes_redondos_izq"
+    android:gravity="center_vertical|right"
+    >
+    <TextView
+
+        android:textColor="@color/black"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalle Nutricion"
+        android:textSize="20sp"
+        />
+
+
+</LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_ejercicos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/img_nutricion_detalle"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombre_nutricion_detalle" />
+
+            <TextView
+                android:id="@+id/nombre_nutricion_detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="24sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+            <TextView
+                android:id="@+id/descripcion_nutricion_detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_nutricion_detalle" />
+
+            <TextView
+                android:id="@+id/url_nutricion_detalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:autoLink="web"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descripcion_nutricion_detalle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

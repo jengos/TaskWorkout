@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fondo"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".view.Activity.RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cuadro_bordes_redondos"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/logo_icon"
+            android:layout_width="53dp"
+            android:layout_height="55dp"
+            android:src="@mipmap/logol_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Crear Cuenta"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+
+                    android:id="@+id/linearCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearNombre"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_email" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:textColorHint="@color/black"
+                        android:theme="@style/CampoTextAzul"
+
+                        >
+
+
+                        <EditText
+                            android:id="@+id/formulario_Correo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ems="10"
+                            android:hint="Correo"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/textSideHint"
+                            android:theme="@style/CampoTextAzul" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearTelefono"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearCorreo"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_phone_call" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:textColorHint="@color/black"
+                        android:theme="@style/CampoTextAzul">
+
+                        <EditText
+                            android:id="@+id/formulario_Telefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:digits="1234567890"
+                            android:ems="2"
+                            android:hint="Telefono"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/textSideHint"
+                            android:theme="@style/CampoTextAzul" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/linearPesoyaltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/linearTelefono">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                        android:elevation="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_peso" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:textColorHint="@color/black"
+                            android:theme="@style/CampoTextAzul"
+
+                            >
+
+
+                            <EditText
+                                android:id="@+id/formulario_Peso"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="1234567890"
+                                android:ems="10"
+                                android:hint="Peso (KG)"
+                                android:inputType="number"
+
+                                android:maxLength="4"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/textSideHint"
+                                android:theme="@style/CampoTextAzul" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                        android:elevation="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+
+
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_altura" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:textColorHint="@color/black"
+                            android:theme="@style/CampoTextAzul"
+
+                            >
+
+                            <EditText
+                                android:id="@+id/formulario_Altura"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:digits="1234567890"
+                                android:ems="10"
+
+                                android:hint="Altura (cm)"
+                                android:inputType="numberDecimal"
+
+                                android:maxLength="4"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/textSideHint"
+                                android:theme="@style/CampoTextAzul" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--genero-->
+                <LinearLayout
+
+
+                    android:id="@+id/linearGenero"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="40dp"
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearPesoyaltura">
+
+                    <EditText
+                        android:id="@+id/et_genero"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/textSideHint"
+                        android:theme="@style/CampoTextAzul"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_genero" />
+
+                    <Spinner
+                        android:id="@+id/lV_genero"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:theme="@style/CampoTextAzul" />
+
+
+                </LinearLayout>
+                <!--Contaseña-->
+                <LinearLayout
+                    android:id="@+id/linearPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearGenero"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_key" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        android:theme="@style/CampoTextAzul"
+
+                        >
+
+                        <EditText
+
+                            android:id="@+id/formulario_Password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:ems="10"
+                            android:hint="Contraseña"
+                            android:inputType="textPassword"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/textSideHint"
+                            android:theme="@style/CampoTextAzul" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <!--verificar Contraseña-->
+                <LinearLayout
+                    android:id="@+id/linearVerificaPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearPassword"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_key" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/black"
+                        android:theme="@style/CampoTextAzul"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/formulario_VerificaPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:hint="Verficar Contraseña"
+                            android:inputType="textPassword"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/textSideHint"
+                            android:theme="@style/CampoTextAzul" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/formulario_bottomRegistar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/animacion_blanco"
+                    android:text="Registrar"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearVerificaPassword" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:elevation="6dp"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_profile_user" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal"
+                        android:textColorHint="@color/black"
+                        android:theme="@style/CampoTextAzul"
+                        app:placeholderTextColor="@color/black">
+
+                        <EditText
+                            android:id="@+id/formulario_Nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:hint="Nombre"
+                            android:inputType="textPersonName"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/textSideHint"
+                            android:theme="@style/CampoTextAzul" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

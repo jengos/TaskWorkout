@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".view.Fragment.MasPerfilFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:padding="@dimen/paddTop">
+
+
+
+        <LinearLayout
+            android:id="@+id/lL_fotoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cuadro_bordes_redondos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_fotoUsuario"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_profile_user" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_NombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nombre Apellidos Apellidos"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lL_fotoUsuario" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/editar_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_ajustes">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_usuario" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/bto_editar_perfil"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editar_perfil" />
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/cerrar_sesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cerrar_sesion" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/cerrar_Sesion"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_ajustes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/tv_ajustes"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:elevation="10dp"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_informa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/infomacion_general"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/protocolos_bioseguridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_informa">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_warnig" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Recomendaciones y sugerencias"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:visibility="gone"
+            android:id="@+id/ver_agenda_entrenador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:gravity="start|center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/protocolos_bioseguridad">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calendar_today_24"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Agenda del dia"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

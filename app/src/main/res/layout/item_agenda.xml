@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="25dp"
+        android:padding="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <TextView
+        android:id="@+id/Sesion_de_Entrenamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="@string/sesion_de_entrenamiento"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/contedorFecha"
+        app:layout_constraintEnd_toStartOf="@id/Contenedorconfirmacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/contedorFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/contedorhora"
+        app:layout_constraintTop_toBottomOf="@id/Sesion_de_Entrenamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Contenedorconfirmacion"
+        >
+
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:text="@string/agenda_fecha" />
+
+        <TextView
+            android:id="@+id/fecha_agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="martes, 10 de Noviembre de 2020"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/contedorhora"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contedorFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Contenedorconfirmacion"
+        >
+
+        <TextView
+            android:id="@+id/hora"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:text="@string/agenda_hora" />
+
+        <TextView
+            android:id="@+id/hora_Agenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:40am"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Contenedorconfirmacion" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Contenedorconfirmacion"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contedorFecha"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_eliminar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmacion"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/confirmacion"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/eliminar"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

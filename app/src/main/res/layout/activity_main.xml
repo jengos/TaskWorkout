@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Activity.MainActivity"
+    android:background="@mipmap/fondo"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:orientation="vertical"
+        android:paddingTop="@dimen/paddTop"
+        android:paddingBottom="@dimen/paddBottom"
+        android:paddingRight="@dimen/paddRight"
+        android:paddingLeft="@dimen/paddLeft"
+        >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cuadro_bordes_redondos"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@mipmap/logo_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 />
+            <!-- Correo-->
+                <LinearLayout
+                    android:elevation="6dp"
+
+                    android:id="@+id/linearCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo"
+                    android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+
+
+                    android:paddingRight="10dp"
+                                        >
+                    <ImageView
+
+                        android:layout_margin="8dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_profile_user"/>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextColor="@color/black"
+
+                        android:textColorHint="@color/black"
+
+                        >
+                    <EditText
+                        app:hintTextColor="@color/black"
+                        android:theme="@style/CampoTextAzul"
+                        android:textSize="15dp"
+                        android:id="@+id/main_Correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Correo"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            <!-- password-->
+            <LinearLayout
+                android:elevation="6dp"
+
+                android:id="@+id/linearPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearCorreo"
+                android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                android:layout_marginTop="@dimen/marginTop"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                >
+                <ImageView
+                    android:layout_margin="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_key"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/black"
+                    android:textColorHint="@color/black"
+                    >
+
+                <EditText
+
+                    android:theme="@style/CampoTextAzul"
+                    android:textSize="15dp"
+                    android:id="@+id/main_Password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="Contraseña"
+
+                    android:textColor="@color/black"
+                    />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bottomIniciarSession"
+               android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearPassword"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/animacion_blanco"
+                android:text="Iniciar Session"
+                />
+        <LinearLayout
+            android:id="@+id/linearRegistar"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomIniciarSession"
+            android:orientation="horizontal"
+
+            >
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/main_textViewRegistar"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:clickable="true"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_margin="5dp"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+
+
+                    android:id="@+id/main_textViewOlviContra"
+                    android:clickable="true"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:text="Olvide mi Contraseña"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearRegistar"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/main_botonGoogle"
+                    android:text="Google"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/ic_google"
+                    android:drawablePadding="25dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/animacion_blanco"
+                    />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

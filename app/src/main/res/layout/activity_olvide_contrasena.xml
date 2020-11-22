@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Activity.OlvideContrasena"
+    android:background="@mipmap/fondo"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cuadro_bordes_redondos"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bloquear" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text=" Olvidates las contraseña ?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="20dp"
+            android:paddingTop="15dp"
+            android:id="@+id/constrainCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="15dp"
+                android:id="@+id/olvidecontaseña_botonverificarCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/animacion_blanco"
+                android:text="Verificar Correo"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearCorreo"/>
+
+            <LinearLayout
+                android:id="@+id/linearCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_email" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:textColorHint="@color/black"
+                    android:theme="@style/CampoTextAzul"
+                    >
+
+
+                    <EditText
+                        android:id="@+id/olvidecontaseña_Correo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="Correo"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/textSideHint"
+                        android:theme="@style/CampoTextAzul" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="20dp"
+            android:paddingTop="15dp"
+            android:id="@+id/constraincContaseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            >
+
+            <!--Contaseña-->
+            <LinearLayout
+                android:id="@+id/linearPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_key" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    android:theme="@style/CampoTextAzul"
+
+                    >
+
+                    <EditText
+
+                        android:id="@+id/olvideContrasena_Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:ems="10"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/textSideHint"
+                        android:theme="@style/CampoTextAzul" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <!--verificar Contraseña-->
+            <LinearLayout
+                android:id="@+id/linearVerificaPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@drawable/cuatro_bordes_redondos_con_borde"
+                android:elevation="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearPassword"
+
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_key" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    android:theme="@style/CampoTextAzul"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/olvideContrasena_VerificaPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:hint="Verficar Contraseña"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/textSideHint"
+                        android:theme="@style/CampoTextAzul" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/olvideContrasena_bottomcambi_contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/animacion_blanco"
+                android:text="Cambiar Contraseña"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearVerificaPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
